@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>5 de 7 | 7 Days Of Code</title>
+</head>
+
+<body>
+    <script>
+        let frutas = [];
+        let laticinios = [];
+        let congelados = [];
+        let doces = [];
+
+        var cont = 0;
+
+        while (cont == 0){
+
+            const op = prompt('Deseja adicionar um item ao carrinho?')
+            var opUpper = op.toUpperCase(); // Para não ter diferença de maiúsculo e minúsculo
+
+            if (opUpper == 'SIM'){
+                const item = prompt('Qual item deseja adicionar no carrinho?')
+                const opCategoria = prompt(`Em qual categoria está o produto que você quer? 
+                1 - Frutas
+                2 - Laticínios
+                3 - Congelados
+                4 - Doces`)
+
+                switch (Number(opCategoria)) {
+                    case 1:
+                        frutas.push(item);
+                        break;
+                    case 2:
+                        laticinios.push(item);
+                        break;
+                    case 3:
+                        congelados.push(item);
+                        break;
+                    case 4:
+                        doces.push(item);
+                        break;
+                    default:
+                        alert(`O valor ${opCategoria} não é válido`)
+                }
+            } else if (opUpper == 'NÃO' || opUpper == 'NAO'){
+                cont += 1;
+            } else {
+                alert('Valor inválido, tente SIM ou NÃO na próxima vez')
+            }
+        }
+
+        alert (`Sua lista de mercado:
+            Frutas: ${frutas}
+            Laticínios: ${laticinios}
+            Congelados: ${congelados}
+            Doces: ${doces}`)
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,49 @@
+  html {
+    font-family: "Roboto Mono", monospace;
+    color: white;
+    background-color: black;
+  }
+  body {
+    width: 50%;
+    max-width: 800px;
+    min-width: 480px;
+    margin: 0 auto;
+    text-align: center;
+  }
+  .lastResult {
+    color: white;
+    padding: 3px;
+  }
+
+  input {
+      border-radius: 10px;
+      margin: 4px;
+      padding: 6px;
+  }
+
+  .envioPalpite {
+      color: green;
+      background-color: lightgreen;
+      border: 2px solid green;
+      box-shadow: 1px 1px 2px lightgreen;
+  }
+
+  .ultimoResultado {
+    font-size: 30px;
+    font-weight: bold;
+  }
+
+  button {
+    border-radius: 10px;
+    margin: 4px;
+    padding: 6px;
+    color: green;
+    background-color: lightgreen;
+    border: 2px solid green;
+    box-shadow: 1px 1px 2px lightgreen;
+  }
+
+
+  
+
+  

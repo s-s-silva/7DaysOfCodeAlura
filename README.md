@@ -7,9 +7,9 @@ Desafio do Alura, pela instrutora Rafaella Ballerini, para estudar JavaScript.
 JavaScript, CSS, HTML5 e Visual Studio Code
 
 ## Desafios (até o momento):
-* [Desafio 1](#desafio1)
-* [Desafio 2](#desafio2)
-* [Desafio 3](##desafio3)
+* [Desafio 1](#desafio-1)
+* [Desafio 2](#desafio-2)
+* [Desafio 3](##desafio-3)
 
 ## Desafio 1 
 Conteúdo do desafio: Operações booleanas 

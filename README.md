@@ -1,4 +1,4 @@
-# 7 Days Of Code da Alura
+# 7 Days Of Code | Alura
 
 ## Contextualização
 Desafio do Alura, pela instrutora Rafaella Ballerini, para estudar JavaScript.

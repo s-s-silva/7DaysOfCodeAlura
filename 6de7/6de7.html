@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>6 de 7 | 7 Days Of Code</title>
+</head>
+
+<body>
+    <script>
+        let frutas = [];
+        let laticinios = [];
+        let congelados = [];
+        let doces = [];
+
+        var cont = 0;
+
+        while (cont == 0) {
+
+            const op = prompt('Deseja adicionar um item ao carrinho?')
+            var opUpper = op.toUpperCase(); // Para não ter diferença de maiúsculo e minúsculo
+
+            if (opUpper == 'SIM') {
+                const item = prompt('Qual item deseja adicionar no carrinho?')
+                const opCategoria = prompt(`Em qual categoria está o produto que você quer? 
+                1 - Frutas
+                2 - Laticínios
+                3 - Congelados
+                4 - Doces`)
+
+                switch (Number(opCategoria)) {
+                    case 1:
+                        frutas.push(item);
+                        break;
+                    case 2:
+                        laticinios.push(item);
+                        break;
+                    case 3:
+                        congelados.push(item);
+                        break;
+                    case 4:
+                        doces.push(item);
+                        break;
+                    default:
+                        alert(`O valor ${opCategoria} não é válido`)
+                }
+            } else if (opUpper == 'NÃO' || opUpper == 'NAO') {
+                cont += 1;
+            } else {
+                alert('Valor inválido, tente SIM ou NÃO na próxima vez')
+            }
+        }
+
+        alert(`Sua lista de compras do mercado:
+            Frutas: ${frutas}
+            Laticínios: ${laticinios}
+            Congelados: ${congelados}
+            Doces: ${doces}`)
+
+        // SEGUNDA PARTE: Remover itens do vetor
+
+        //inicializa variáveis
+        let contRemove = 0;
+        let itemRem = null; 
+        let pos = null; 
+
+        while (contRemove == 0){
+            const opRetira = prompt('Deseja retirar um item da sua lista?');
+            var opRetiraUp = opRetira.toUpperCase();
+
+            if (opRetiraUp == 'SIM') {
+                const numCat = prompt(`Para retirar, nos indique pelo número em qual categoria está o item. Lembrando que essa é sua lista:
+                1 - Frutas: ${frutas}
+                2 - Laticínios: ${laticinios}
+                3 - Congelados: ${congelados}
+                4 - Doces: ${doces}`)
+
+                switch (Number(numCat)) {
+
+                    case 1:
+                        itemRem = prompt(`Agora nos informe o item da categoria ${numCat} que deseja excluir.  Lembrando que essa é sua lista: 
+                        ${frutas}`)
+
+                        if (frutas.includes(itemRem) == true) {
+                            pos = frutas.indexOf(itemRem)
+                            frutas.splice(pos, 1);
+                        } else {
+                            alert('Não existe esse item na lista')
+                        }
+                        break;
+
+                    case 2:
+                        itemRem = prompt(`Agora nos informe o item da categoria ${numCat} que deseja excluir.  Lembrando que essa é sua lista:
+                        ${laticinios}`)
+                        
+                        if (laticinios.includes(itemRem) == true) {
+                            pos = laticinios.indexOf(itemRem)
+                            laticinios.splice(pos, 1);
+                        } else {
+                            alert('Não existe esse item na lista')
+                        }
+                        break;
+
+                    case 3:
+                        itemRem = prompt(`Agora nos informe o item da categoria ${numCat} que deseja excluir.  Lembrando que essa é sua lista:
+                        ${congelados}`)
+                        
+                        if (congelados.includes(itemRem) == true) {
+                            pos = congelados.indexOf(itemRem)
+                            congelados.splice(pos, 1);
+                        } else {
+                            alert('Não existe esse item na lista')
+                        }
+                        break;
+
+                    case 4:
+                        itemRem = prompt(`Agora nos informe o item da categoria ${numCat} que deseja excluir.  Lembrando que essa é sua lista:
+                        ${doces}`)
+                        
+                        if (doces.includes(itemRem) == true) {
+                            pos = doces.indexOf(itemRem)
+                            doces.splice(pos, 1);
+                        } else {
+                            alert('Não existe esse item na lista')
+                        }
+                        break;
+                    default:
+                        alert('Não existe essa categoria, tente 1, 2, 3 ou 4')
+                }
+            } else if (opRetiraUp == 'NÃO' || opRetiraUp == 'NAO') {
+                contRemove += 1;
+            } else {
+                alert('Valor inválido, tente SIM ou NÃO na próxima vez')
+            }
+        }
+
+        alert(`Sua lista de compras do mercado atualizada:
+            Frutas: ${frutas}
+            Laticínios: ${laticinios}
+            Congelados: ${congelados}
+            Doces: ${doces}`)
+
+    </script>
+</body>
+
+</html>

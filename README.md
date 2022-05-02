@@ -15,7 +15,7 @@ JavaScript, CSS, HTML5 e Visual Studio Code
 * [Desafio 4](##desafio-4)
 * [Desafio 5](##desafio-5)
 * [Desafio 6](##desafio-6)
-* [Dasadio-7} (##desafio-7)
+* [Dasadio-7] (##desafio-7)
 
 ## Desafio 1 
 Conteúdo do desafio: Operações booleanas 
